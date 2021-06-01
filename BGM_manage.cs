@@ -24,7 +24,8 @@ public class BGM_manage : MonoBehaviour
             yield return new WaitForSeconds(1.0f);
             if (!soundSource.isPlaying)
             {
-                soundSource.clip = intro_music[1 - index];
+                index = 1 - index;
+                soundSource.clip = intro_music[index];
                 soundSource.Play();
                 soundSource.loop = true;
             }
